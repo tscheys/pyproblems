@@ -27,6 +27,7 @@ def robot(board):
     if i == len(board) - 1 and j == len(board[i]) - 1:
       # increment solutions
       solutions["count"] += 1
+      board[i][j] == False
       return
     # set visited to true
     board[i][j] = True
@@ -37,7 +38,6 @@ def robot(board):
     traverse(i - 1, j)
     # set current location back to false 
     board[i][j] = False
-    return 
   traverse(0,0)
   return solutions["count"]
 
